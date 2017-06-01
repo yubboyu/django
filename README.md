@@ -1,3 +1,3 @@
-Welcome to a django experiment
-==============================
+Django experiment
+=================
 
