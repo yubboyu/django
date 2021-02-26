@@ -1,3 +1,3 @@
-cd mysite
-python manage.py runserver $PORT
+cd mypro
+python3 manage.py runserver 8088
 
