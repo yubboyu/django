@@ -1,3 +1,3 @@
 cd mypro
-python3 manage.py runserver 8088
+python3 manage.py runserver
 
