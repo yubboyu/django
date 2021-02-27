@@ -7,6 +7,10 @@ from django.http import HttpResponse
 #     return HttpResponse("Hello World fuck!")
 
 def index(request):
-    return render(request,'webtestapp/index.html')
+    my_dict = {
+      'insert_something':"views.pyのfucking insert_something部分です" ,
+      'name':"minsa"
+    }
+    return render(request,'webtestapp/index.html' , my_dict)
  
  
