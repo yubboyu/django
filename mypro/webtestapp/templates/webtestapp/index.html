@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>テストWebアプリ</title>
     <link rel="stylesheet" href="/static/css/style.css"/>
-    <script src="{% static 'javascript/sample.js' %}"></script>
+    <script src="/static/javascript/sample.js"></script>
   </head>
   <body>
     <h1>fucking index.html表示してます</h1>
@@ -12,7 +12,7 @@
     <p>
     </p>
     {{ insert_something }}
-    <p>作成者はfucking <b>{{ name }}</b> です。</p>
+    <p>作成者は<b id="test"> fucking {{ name }}</b> です。</p>
   </body>
 </html>
 

@@ -9,7 +9,7 @@ from django.http import HttpResponse
 def index(request):
     my_dict = {
       'insert_something':"views.pyのfucking insert_something部分です" ,
-      'name':"minsa"
+      'name':"morioka"
     }
     return render(request,'webtestapp/index.html' , my_dict)
  
