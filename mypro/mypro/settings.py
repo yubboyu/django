@@ -25,7 +25,7 @@ SECRET_KEY = 't2@^amdhr6g^-*k!u&&&&oh7#pagc6984128ta*p0py48wpns2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['certain-sprinkle-apatosaurus.glitch.me']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
