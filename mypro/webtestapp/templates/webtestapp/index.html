@@ -16,7 +16,11 @@
     <p>作成者は<b id="test"> fucking {{ name }}</b> です。</p>
     
     <p>{{insert_forms|safe}}</p>
-    
+    <form action="{% url 'webtestapp:index' %}" method="post">
+      {% csrf_token %}
+      {{ form }}
+      <input type="submit" value="送信">
+    </form>
   </body>
 </html>
 
