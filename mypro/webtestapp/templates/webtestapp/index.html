@@ -2,6 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
+    
     <title>テストWebアプリ</title>
     <link rel="stylesheet" href="/static/css/style.css"/>
     <script src="/static/javascript/sample.js"></script>
@@ -13,6 +14,9 @@
     </p>
     {{ insert_something }}
     <p>作成者は<b id="test"> fucking {{ name }}</b> です。</p>
+    
+    <p>{{insert_forms|safe}}</p>
+    
   </body>
 </html>
 
