@@ -18,8 +18,13 @@
     <p>{{insert_forms|safe}}</p>
     <form action="{% url 'webtestapp:index' %}" method="post">
       {% csrf_token %}
-      {{ form }}
-      <input type="submit" value="送信">
+      <p>
+        <tr><td></td><td>入力フォーム</td></tr>
+      </p>
+      {{ form.as_table }}
+      <p>
+        <tr><td></td><td><input type="submit" value="送信"></td></tr>
+      </p>
     </form>
   </body>
 </html>
