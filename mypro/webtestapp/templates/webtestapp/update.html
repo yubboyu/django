@@ -1,0 +1,11 @@
+<body>
+    <h1>{{ title }} No.{{ id }}</h1>
+    <table>
+        <form action="{% url 'webtestapp:update' id %}" method="post">
+        {% csrf_token %}
+        {{ form.as_table }}
+        <tr><td>fucking update</td><td><input type="submit" value="送信"></td></tr>
+        </form>
+    </table>
+</body>
+
