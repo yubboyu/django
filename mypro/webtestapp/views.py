@@ -52,6 +52,7 @@ def update(request, num):
     if (request.method == 'POST'):
         info = InfoModelFormAdd(request.POST, instance=obj)
         info.save()
+        header = ['ID','名前','メール','性別','部署','社歴','作成日','']
         return redirect(to='/info')
     update_dict = {
         'title':'登録情報更新画面',
