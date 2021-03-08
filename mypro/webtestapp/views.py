@@ -25,7 +25,7 @@ def index(request):
 
 def info(request):
     infodata = InfoModelForm.objects.all()
-    header = ['ID','名前','メール','性別','部署','社歴','作成日']
+    header = ['ID','名前','メール','性別','部署','社歴','作成日','']
     my_dict2 = {
         'title':'テスト',
         'val':infodata,
