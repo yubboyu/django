@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from .forms import TestForm # forms.pyに記述したTestFormをimport
 from .forms import InfoModelFormAdd
 from .models import InfoModelForm
+from django.shortcuts import redirect
 
 # def index(request):
 #     return HttpResponse("Hello World fuck!")
