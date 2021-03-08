@@ -1,29 +1,25 @@
 
 
-
-    <h1>{{ title }}</h1>
-    <p>{{ val }}</p>
-
+  <body>
+    <h1>{{title}}</h1>
     <table>
       <tr>
-        <th>.objects.all('id', 'name')の表示</th>
+      {% for h in header %}
+        <th>{{h}}</th>
+      {% endfor %}
       </tr>
-    {% for i in val %}
-    <tr>
-      <th>{{ i }}</th>
-    </tr>
-    {% endfor %}
+
+      {% for i in val %}
+      <tr>
+        <td>{{ i.id }}</td>
+        <td>{{ i.name }}</td>
+        <td>{{ i.mail }}</td>
+        <td>{% if i.gender == False %}男{% endif %}
+            {% if i.gender == True %}女{% endif %}</td>
+        <td>{{ i.department }}</td>
+        <td>{{ i.year }}</td>
+        <td>{{ i.created_at }}</td>
+      </tr>
+      {% endfor %}
   </table>
-
-  <p>{{ val2 }}</p>
-
-  <table>
-    <tr>
-      <th>.objects.values()の表示</th>
-    </tr>
-  {% for i2 in val2 %}
-  <tr>
-    <th>{{ i2 }}</th>
-  </tr>
-  {% endfor %}
-</table>
+  </body>

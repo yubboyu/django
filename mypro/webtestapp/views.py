@@ -23,11 +23,11 @@ def index(request):
 
 def info(request):
     infodata = InfoModelForm.objects.all()
-    infodata2 = InfoModelForm.objects.values()
+    header = ['ID','名前','メール','性別','部署','社歴','作成日']
     my_dict2 = {
         'title':'テスト',
         'val':infodata,
-        'val2':infodata2,
+        'header':header,
     }
     return render(request, 'webtestapp/info.html',my_dict2)
 
