@@ -45,3 +45,18 @@ def create(request):
     }
     return render(request, 'webtestapp/create.html', modelform_dict)
 
+
+def update(request, num):
+    obj = InfoModelForm.objects.get(id=num)
+    # POST送信されていたら
+    if (request.method == 'POST'):
+        info = InfoModelFormAdd(request.POST, instance=obj)
+        info.save()
+        return redirect(to='/info')
+    update_dict = {
+        'title':'登録情報更新画面',
+        'id':num,
+        'form':InfoModelFormAdd(instance=obj),
+    }
+    return render(request, 'webtestapp/update.html',update_dict)
+
