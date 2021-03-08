@@ -3,6 +3,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import TestForm # forms.pyに記述したTestFormをimport
+from .forms import InfoModelFormAdd
 from .models import InfoModelForm
 
 # def index(request):
@@ -30,4 +31,16 @@ def info(request):
         'header':header,
     }
     return render(request, 'webtestapp/info.html',my_dict2)
+
+def create(request):
+    if (request.method == 'POST'):
+        obj = InfoModelForm()
+        info = InfoModelFormAdd(request.POST, instance=obj)
+        info.save()
+        return redirect(to='/info')
+    modelform_dict = {
+        'title':'modelformテスト',
+        'form':InfoModelFormAdd(),
+    }
+    return render(request, 'webtestapp/create.html', modelform_dict)
 
