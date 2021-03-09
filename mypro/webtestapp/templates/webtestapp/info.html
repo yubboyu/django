@@ -26,17 +26,17 @@
   <form action="{% url 'webtestapp:search' %}" method="post">
     {% csrf_token %}
     <p>
-      ID：<input type="int" name="a" size="40">
+      ID：<input type="int" name="a" id="a" size="40">
     </p>
     <p>
-      名前：<input type="text" name="b" size="40">
+      名前：<input type="text" name="b" id="b" size="40">
     </p>
     <p>
-      メール：<input type="text" name="c" size="40">
+      メール：<input type="text" name="c" id="c" size="40">
     </p>
     <p>
-      性別：<input type="radio" name="d" value="False">男
-      <input type="radio" name="d" value="True">女
+      性別：<input type="radio" name="d" id="d" value="False">男
+      <input type="radio" name="d" id="d" value="True">女
     </p>
     <p>
       部署：<input type="text" name="e" size="40">
