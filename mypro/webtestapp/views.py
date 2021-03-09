@@ -94,10 +94,10 @@ def search(request , a , b , c , d , e , f , g ):
       pass
     else :
       infodata = infodata.filter(department__contains='e')
-    if c == null:
+    if f == null:
       pass
     else :
-      infodata = infodata.filter(mail__contains='c')
+      infodata = infodata.filter(year='f')
     header = ['ID','名前','メール','性別','部署','社歴','作成日','']
     my_dict2 = {
         'title':'テスト',
