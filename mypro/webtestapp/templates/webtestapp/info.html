@@ -24,8 +24,30 @@
       {% endfor %}
   </table>
   <form action="{% url 'webtestapp:search' %}" method="post">
-    <td><input type="submit" value="送信" /></td>
-    
+    {% csrf_token %}
+    <p>
+      ID：<input type="int" name="a" size="40">
+    </p>
+    <p>
+      名前：<input type="text" name="b" size="40">
+    </p>
+    <p>
+      メール：<input type="text" name="c" size="40">
+    </p>
+    <p>
+      性別：<input type="radio" name="d" value="False">男
+      <input type="radio" name="d" value="True">女
+    </p>
+    <p>
+      部署：<input type="text" name="e" size="40">
+    </p>
+    <p>
+      社歴：<input type="text" name="f" size="40">
+    </p>
+    <p>
+      <input type="hidden" name="g" size="40">
+    </p>
+    <input type="submit" value="送信"><input type="reset" value="リセット">
   </form>
   <a href="/index.html">戻る</a>
   </body>
