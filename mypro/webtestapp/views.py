@@ -73,7 +73,7 @@ def delete(request, num):
     }
     return render(request, 'webtestapp/delete.html',delete_dict)
 
-def search(self, request, *args , **kwargs):
+def search(request, *args , **kwargs):
     context = {
         'a': request.POST['a'],
         'b': request.POST['b'],
@@ -82,38 +82,38 @@ def search(self, request, *args , **kwargs):
         'e': request.POST['e'],
         'f': request.POST['f'],
     }
-    if a == null:
+    if context[a] == null:
       pass
     else :
-      infodata = InfoModelForm.objects.filter(id='a')
-    if b == null:
+      infodata = InfoModelForm.objects.filter(id='context[a]')
+    if context[b] == null:
       pass
     else :
-      infodata = infodata.filter(name__contains='b')
-    if c == null:
+      infodata = infodata.filter(name__contains='context[b]')
+    if context[c] == null:
       pass
     else :
-      infodata = infodata.filter(mail__contains='c')
-    if d == null:
+      infodata = infodata.filter(mail__contains='context[c]')
+    if context[d] == null:
       pass
     else :
-      infodata = infodata.filter(gender='d')
+      infodata = infodata.filter(gender='context[d]')
 
-    if e == null:
+    if context[e] == null:
       pass
     else :
-      infodata = infodata.filter(department__contains='e')
-    if f == null:
+      infodata = infodata.filter(department__contains='context[e]')
+    if context[f] == null:
       pass
     else :
-      infodata = infodata.filter(year='f')
+      infodata = infodata.filter(year='context[f]')
     header = ['ID','名前','メール','性別','部署','社歴','作成日','']
     my_dict2 = {
         'title':'テスト',
         'val':infodata,
         'header':header,
     }
-    return render(request, 'webtestapp/info.html',my_dict2)
+    return render(request, 'webtestapp/search.html',my_dict2)
 
 
 
