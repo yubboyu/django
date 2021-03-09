@@ -78,7 +78,8 @@ def search( request, *args , **kwargs):
         'a': request.POST['a'],
         'b': request.POST['b'],
         'c': request.POST['c'],
-        'd': request.POST['d'],
+        'd1': request.POST['d1'],
+        'd2': request.POST['d2'],
         'e': request.POST['e'],
         'f': request.POST['f'],
     }
@@ -94,7 +95,11 @@ def search( request, *args , **kwargs):
       pass
     else :
       infodata = infodata.filter(mail__contains='c')
-    if d == null:
+    if d1 == null:
+      pass
+    else :
+      infodata = infodata.filter(gender='d')
+    if d2 == null:
       pass
     else :
       infodata = infodata.filter(gender='d')
