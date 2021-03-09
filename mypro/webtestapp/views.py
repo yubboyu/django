@@ -61,5 +61,16 @@ def update(request, num):
     }
     return render(request, 'webtestapp/update.html',update_dict)
 
+def delete(request, num):
+    obj = InfoModelForm.objects.get(id=num)
+    if (request.method == 'POST'):
+        obj.delete()
+        return redirect(to='/info')
+    delete_dict = {
+        'title':'削除確認',
+        'id':num,
+        'obj':obj,
+    }
+    return render(request, 'webtestapp/delete.html',delete_dict)
 
 

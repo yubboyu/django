@@ -6,6 +6,10 @@
         {{ form.as_table }}
         <tr><td></td><td><input type="submit" value="送信"></td></tr>
         </form>
+        <form action="{% url 'webtestapp:delete' id %}" method="post">
+        {% csrf_token %}
+        <tr><th></th><td><input type="submit" value="削除"></td></tr>
+      </form>
     </table>
 </body>
 
