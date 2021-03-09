@@ -73,13 +73,12 @@ def delete(request, num):
     }
     return render(request, 'webtestapp/delete.html',delete_dict)
 
-def search( request, *args , **kwargs):
+def search(self, request, *args , **kwargs):
     context = {
         'a': request.POST['a'],
         'b': request.POST['b'],
         'c': request.POST['c'],
-        'd1': request.POST['d1'],
-        'd2': request.POST['d2'],
+        'd': request.POST['d'],
         'e': request.POST['e'],
         'f': request.POST['f'],
     }
@@ -95,14 +94,11 @@ def search( request, *args , **kwargs):
       pass
     else :
       infodata = infodata.filter(mail__contains='c')
-    if d1 == null:
+    if d == null:
       pass
     else :
       infodata = infodata.filter(gender='d')
-    if d2 == null:
-      pass
-    else :
-      infodata = infodata.filter(gender='d')
+
     if e == null:
       pass
     else :
