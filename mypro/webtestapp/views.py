@@ -73,4 +73,15 @@ def delete(request, num):
     }
     return render(request, 'webtestapp/delete.html',delete_dict)
 
+def search(request , a , b , c , d , e , f , g ):
+    infodata = InfoModelForm.objects.filter()
+    header = ['ID','名前','メール','性別','部署','社歴','作成日','']
+    my_dict2 = {
+        'title':'テスト',
+        'val':infodata,
+        'header':header,
+    }
+    return render(request, 'webtestapp/info.html',my_dict2)
+
+
 
