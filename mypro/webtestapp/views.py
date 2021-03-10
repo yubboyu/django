@@ -74,8 +74,8 @@ def delete(request, num):
     return render(request, 'webtestapp/delete.html',delete_dict)
 
 def search(request):
-    a = request.POST['a']
-    b = request.POST['b']
+    a = request.POST.get(a)
+    b = request.POST.get(b)
     c = request.POST['c']
     d = request.POST['d']
     e = request.POST['e']
