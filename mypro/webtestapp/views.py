@@ -74,36 +74,30 @@ def delete(request, num):
     return render(request, 'webtestapp/delete.html',delete_dict)
 
 def search(request):
-    a = request.POST.get(a)
-    b = request.POST.get(b)
-    c = request.POST['c']
-    d = request.POST['d']
-    e = request.POST['e']
-    f = request.POST['f']
-    if not a :
+    if not request.POST.get(a) :
       pass
     else :
-      infodata = InfoModelForm.objects.filter(id='a')
-    if not b :
+      infodata = InfoModelForm.objects.filter(id='request.POST.get(a)')
+    if not request.POST.get(b) :
       pass
     else :
-      infodata = infodata.filter(name__contains='b')
-    if not c :
+      infodata = infodata.filter(name__contains='request.POST.get(b)')
+    if not request.POST.get(c) :
       pass
     else :
-      infodata = infodata.filter(mail__contains='c')
-    if not d :
+      infodata = infodata.filter(mail__contains='request.POST.get(c)')
+    if not request.POST.get(d) :
       pass
     else :
-      infodata = infodata.filter(gender='d')
-    if not e :
+      infodata = infodata.filter(gender='request.POST.get(b)')
+    if not request.POST.get(e) :
       pass
     else :
-      infodata = infodata.filter(department__contains='e')
-    if not f :
+      infodata = infodata.filter(department__contains='request.POST.get(e)')
+    if not request.POST.get(f) :
       pass
     else :
-      infodata = infodata.filter(year='f')
+      infodata = infodata.filter(year='request.POST.get(f)')
     header = ['ID','名前','メール','性別','部署','社歴','作成日','']
     my_dict2 = {
         'title':'テスト',
