@@ -73,7 +73,7 @@ def delete(request, num):
     }
     return render(request, 'webtestapp/delete.html',delete_dict)
 
-def search(request, *args , **kwargs):
+def search(request, ):
     context = {
         'a': request.POST['a'],
         'b': request.POST['b'],
