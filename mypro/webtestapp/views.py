@@ -74,23 +74,21 @@ def delete(request, num):
     return render(request, 'webtestapp/delete.html',delete_dict)
 
 def search(request):
-    context = {
-        'a': request.POST['a'],
-        'b': request.POST['b'],
-        'c': request.POST['c'],
-        'd': request.POST['d'],
-        'e': request.POST['e'],
-        'f': request.POST['f'],
-    }
-    if context[a] == null:
+    a = request.POST['a']
+    b = request.POST['b']
+    c = request.POST['c']
+    d = request.POST['d']
+    e = request.POST['e']
+    f = request.POST['f']
+    if a == null:
       pass
     else :
       infodata = InfoModelForm.objects.filter(id='context[a]')
-    if context[b] == null:
+    if b == null:
       pass
     else :
       infodata = infodata.filter(name__contains='context[b]')
-    if context[c] == null:
+    if c == null:
       pass
     else :
       infodata = infodata.filter(mail__contains='context[c]')
