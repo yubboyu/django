@@ -26,26 +26,26 @@
   <form action="{% url 'webtestapp:search' %}" method="post">
     {% csrf_token %}
     <p>
-      ID：<input type="int" name="a" id="a" value="null" size="40">
+      ID：<input type="int" name="a" id="a" value="" size="40">
     </p>
     <p>
-      名前：<input type="text" name="b" id="b" value="null" size="40">
+      名前：<input type="text" name="b" id="b" value="" size="40">
     </p>
     <p>
-      メール：<input type="text" name="c" id="c" value="null" size="40">
+      メール：<input type="text" name="c" id="c" value="" size="40">
     </p>
     <p>
       性別：<input type="radio" name="d" id="d1" value="False">男
       <input type="radio" name="d" id="d2" value="True">女
     </p>
     <p>
-      部署：<input type="text" name="e" id="e" value="null" size="40">
+      部署：<input type="text" name="e" id="e" value="" size="40">
     </p>
     <p>
-      社歴：<input type="text" name="f" id="f" value="null" size="40">
+      社歴：<input type="text" name="f" id="f" value="" size="40">
     </p>
     <p>
-      <input type="hidden" name="g" id="g" value="null" size="40">
+      <input type="hidden" name="g" id="g" value="" size="40">
     </p>
     <input type="submit" value="送信"><input type="reset" value="リセット">
   </form>

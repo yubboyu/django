@@ -80,31 +80,30 @@ def search(request):
     d = request.POST['d']
     e = request.POST['e']
     f = request.POST['f']
-    if a == null:
+    if not a :
       pass
     else :
-      infodata = InfoModelForm.objects.filter(id='context[a]')
-    if b == null:
+      infodata = InfoModelForm.objects.filter(id='a')
+    if not b :
       pass
     else :
-      infodata = infodata.filter(name__contains='context[b]')
-    if c == null:
+      infodata = infodata.filter(name__contains='b')
+    if not c :
       pass
     else :
-      infodata = infodata.filter(mail__contains='context[c]')
-    if context[d] == null:
+      infodata = infodata.filter(mail__contains='c')
+    if not d :
       pass
     else :
-      infodata = infodata.filter(gender='context[d]')
-
-    if context[e] == null:
+      infodata = infodata.filter(gender='d')
+    if not e :
       pass
     else :
-      infodata = infodata.filter(department__contains='context[e]')
-    if context[f] == null:
+      infodata = infodata.filter(department__contains='e')
+    if not f :
       pass
     else :
-      infodata = infodata.filter(year='context[f]')
+      infodata = infodata.filter(year='f')
     header = ['ID','名前','メール','性別','部署','社歴','作成日','']
     my_dict2 = {
         'title':'テスト',
