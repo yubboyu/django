@@ -74,30 +74,31 @@ def delete(request, num):
     return render(request, 'webtestapp/delete.html',delete_dict)
 
 def search(request):
-    if not request.POST.get(a) :
+    infodata = InfoModelForm.objects.all()
+    if not request.POST.get('a') :
       pass
     else :
-      infodata = InfoModelForm.objects.filter(id='request.POST.get(a)')
-    if not request.POST.get(b) :
+      infodata = InfoModelForm.objects.filter(id=request.POST.get('a'))
+    if not request.POST.get('b') :
       pass
     else :
-      infodata = infodata.filter(name__contains='request.POST.get(b)')
-    if not request.POST.get(c) :
+      infodata = infodata.filter(name__contains=request.POST.get('b'))
+    if not request.POST.get('c') :
       pass
     else :
-      infodata = infodata.filter(mail__contains='request.POST.get(c)')
-    if not request.POST.get(d) :
+      infodata = infodata.filter(mail__contains=request.POST.get('c'))
+    if not request.POST.get('d') :
       pass
     else :
-      infodata = infodata.filter(gender='request.POST.get(b)')
-    if not request.POST.get(e) :
+      infodata = infodata.filter(gender=request.POST.get(b))
+    if not request.POST.get('e') :
       pass
     else :
-      infodata = infodata.filter(department__contains='request.POST.get(e)')
-    if not request.POST.get(f) :
+      infodata = infodata.filter(department__contains=request.POST.get(e))
+    if not request.POST.get('f') :
       pass
     else :
-      infodata = infodata.filter(year='request.POST.get(f)')
+      infodata = infodata.filter(year=request.POST.get(f))
     header = ['ID','名前','メール','性別','部署','社歴','作成日','']
     my_dict2 = {
         'title':'テスト',
