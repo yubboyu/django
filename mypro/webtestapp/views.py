@@ -90,15 +90,15 @@ def search(request):
     if not request.POST.get('d') :
       pass
     else :
-      infodata = infodata.filter(gender=request.POST.get(b))
+      infodata = infodata.filter(gender=request.POST.get('c'))
     if not request.POST.get('e') :
       pass
     else :
-      infodata = infodata.filter(department__contains=request.POST.get(e))
+      infodata = infodata.filter(department__contains=request.POST.get('e'))
     if not request.POST.get('f') :
       pass
     else :
-      infodata = infodata.filter(year=request.POST.get(f))
+      infodata = infodata.filter(year=request.POST.get('f'))
     header = ['ID','名前','メール','性別','部署','社歴','作成日','']
     my_dict2 = {
         'title':'テスト',
