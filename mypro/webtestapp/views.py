@@ -76,30 +76,36 @@ def delete(request, num):
 
 def search(request):
     infodata = InfoModelForm.objects.all()
-    if not request.POST.get('a') :
+    if not request.POST.get('a') : # for ID
       pass
     else :
-      infodata = InfoModelForm.objects.filter(id=request.POST.get('a'))
-    if not request.POST.get('b') :
+      searcha = request.POST.get('a')
+      infodata = InfoModelForm.objects.filter(id=request.POST.get('searcha'))
+    if not request.POST.get('b') : # for NAME
       pass
     else :
       searchb = str(name__contains=request.POST.get('b'))
       infodata = infodata.filter(searchb)
-    if not request.POST.get('c') :
+    if not request.POST.get('c') : # for E-MAIL
       pass
     else :
       infodata = infodata.filter(mail__contains=request.POST.get('c'))
-    if not request.POST.get('d') :
+    if not request.POST.get('d') : # for GENDER
       pass
     else :
+      if request.POST.get('d') == 0 :
+        searchd = False
+      else :
+        searchd = True
       infodata = infodata.filter(gender=request.POST.get('c'))
-    if not request.POST.get('e') :
+    if not request.POST.get('e') : # for DEPARTMENT
       pass
     else :
       infodata = infodata.filter(department__contains=request.POST.get('e'))
-    if not request.POST.get('f') :
+    if not request.POST.get('f') : # for YEAR
       pass
     else :
+      searchf = int(request.POST.get('f'))
       infodata = infodata.filter(year=request.POST.get('f'))
     header = ['ID','名前','メール','性別','部署','社歴','作成日','']
     my_dict2 = {
