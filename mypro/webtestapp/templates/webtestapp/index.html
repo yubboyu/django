@@ -23,6 +23,7 @@
     <form action="{% url 'webtestapp:index' %}" method="post">
       {% csrf_token %}
       <p>
+        <!--
         <tr>
           <td></td>
           <td>入力フォーム</td>
@@ -31,10 +32,12 @@
 
       {{ form.as_table }}
       <p>
+        
         <tr>
           <td></td>
           <td><input type="submit" value="送信" /></td>
         </tr>
+        -->
       </p>
     </form>
   </body>

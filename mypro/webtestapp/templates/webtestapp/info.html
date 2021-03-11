@@ -23,6 +23,7 @@
       </tr>
       {% endfor %}
   </table>
+  <p>検索フォーム</p>
   <form action="{% url 'webtestapp:search' %}" method="post">
     {% csrf_token %}
     <p>

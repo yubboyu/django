@@ -13,10 +13,10 @@ from django.shortcuts import redirect
 
 def index(request):
     my_dict = {
-      'insert_something':"views.pyのfucking insert_something部分です" ,
+      'insert_something':"" ,
       'name':"morioka" ,
       'form':TestForm() ,
-      'insert_forms':'default_value'
+      'insert_forms':''
     }
     if (request.method == 'POST'):
       my_dict['insert_forms'] = '文字列:' + request.POST['text'] + '<br>整数型:' + request.POST['num']
@@ -28,7 +28,7 @@ def info(request):
     infodata = InfoModelForm.objects.all()
     header = ['ID','名前','メール','性別','部署','社歴','作成日','']
     my_dict2 = {
-        'title':'テスト',
+        'title':'一覧',
         'val':infodata,
         'header':header,
     }
