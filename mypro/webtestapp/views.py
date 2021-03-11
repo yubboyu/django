@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from .forms import TestForm # forms.pyに記述したTestFormをimport
 from .forms import InfoModelFormAdd
 from .models import InfoModelForm
+from .models import SearchModelForm
 from django.shortcuts import redirect
 
 # def index(request):
@@ -74,7 +75,7 @@ def delete(request, num):
     return render(request, 'webtestapp/delete.html',delete_dict)
 
 def search(request):
-    infodata = InfoModelForm.objects.all()
+    infodata = SearchModelForm.objects.all()
     if not request.POST.get('a') :
       pass
     else :

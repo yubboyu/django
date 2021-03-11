@@ -19,9 +19,9 @@ class InfoModelForm(models.Model):
 class SearchModelForm(models.Model):
     name = models.CharField('名前',max_length=255)
     mail = models.EmailField('メール',max_length=255)
-    gender = models.CharField('性別')
+    gender = models.CharField('性別',max_length=16)
     department = models.CharField('部署',max_length=255)
-    year = models.CharField('社歴',default=0)
+    year = models.CharField('社歴',default=0,max_length=16)
     created_at = models.DateField('作成日',default=timezone.now)
 
     def __str__(self):
