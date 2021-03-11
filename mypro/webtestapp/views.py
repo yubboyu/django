@@ -79,7 +79,7 @@ def search(request):
     if not request.POST.get('a') : # for ID
       pass
     else :
-      searcha = request.POST.get('a')
+      searcha = int(request.POST.get('a'))
       infodata = InfoModelForm.objects.filter(id=request.POST.get('searcha'))
     if not request.POST.get('b') : # for NAME
       pass
@@ -93,11 +93,11 @@ def search(request):
     if not request.POST.get('d') : # for GENDER
       pass
     else :
-      if request.POST.get('d') == 'male' :
+      if request.POST.get('d') == 'False' :
         searchd = False
       else :
         searchd = True
-      infodata = infodata.filter(gender=request.POST.get('c'))
+      infodata = infodata.filter(gender=request.POST.get('searchd'))
     if not request.POST.get('e') : # for DEPARTMENT
       pass
     else :
