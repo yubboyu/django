@@ -80,7 +80,7 @@ def search(request):
       pass
     else :
       searcha = int(request.POST.get('a'))
-      infodata = InfoModelForm.objects.filter(id=request.POST.get('searcha'))
+      infodata = infodata.filter(id=searcha)
     if not request.POST.get('b') : # for NAME
       pass
     else :
@@ -97,7 +97,7 @@ def search(request):
         searchd = False
       else :
         searchd = True
-      infodata = infodata.filter(gender=request.POST.get('searchd'))
+      infodata = infodata.filter(gender=searchd)
     if not request.POST.get('e') : # for DEPARTMENT
       pass
     else :
