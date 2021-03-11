@@ -14,8 +14,8 @@
         <td>{{ i.id }}</td>
         <td>{{ i.name }}</td>
         <td>{{ i.mail }}</td>
-        <td>{% if i.gender == False %}男{% endif %}
-            {% if i.gender == True %}女{% endif %}</td>
+        <td>{% if i.gender == 0 %}男{% endif %}
+            {% if i.gender == 1 %}女{% endif %}</td>
         <td>{{ i.department }}</td>
         <td>{{ i.year }}</td>
         <td>{{ i.created_at }}</td>
@@ -35,8 +35,8 @@
       メール：<input type="text" name="c" id="c" value="" size="40">
     </p>
     <p>
-      性別：<input type="radio" name="d" id="d1" value="False" checked="checked">男
-      <input type="radio" name="d" id="d2" value="True">女
+      性別：<input type="radio" name="d" id="d1" value="0" checked="checked">男
+      <input type="radio" name="d" id="d2" value="1">女
     </p>
     <p>
       部署：<input type="text" name="e" id="e" value="" size="40">

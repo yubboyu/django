@@ -12,8 +12,8 @@
         <td>{{ i.id }}</td>
         <td>{{ i.name }}</td>
         <td>{{ i.mail }}</td>
-        <td>{% if i.gender == False %}男{% endif %}
-            {% if i.gender == True %}女{% endif %}</td>
+        <td>{% if i.gender == 0 %}男{% endif %}
+            {% if i.gender == 1 %}女{% endif %}</td>
         <td>{{ i.department }}</td>
         <td>{{ i.year }}</td>
         <td>{{ i.created_at }}</td>
