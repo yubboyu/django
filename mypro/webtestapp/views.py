@@ -93,7 +93,7 @@ def search(request):
     if not request.POST.get('d') : # for GENDER
       pass
     else :
-      if request.POST.get('d') == 0 :
+      if request.POST.get('d') == 'male' :
         searchd = False
       else :
         searchd = True
