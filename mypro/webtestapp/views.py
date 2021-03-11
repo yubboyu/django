@@ -84,8 +84,8 @@ def search(request):
     if not request.POST.get('b') : # for NAME
       pass
     else :
-      searchb = str(name__contains=request.POST.get('b'))
-      infodata = infodata.filter(searchb)
+      searchb = str(request.POST.get('b'))
+      infodata = infodata.filter(name__contains=searchb)
     if not request.POST.get('c') : # for E-MAIL
       pass
     else :
