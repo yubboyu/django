@@ -75,7 +75,7 @@ def delete(request, num):
     return render(request, 'webtestapp/delete.html',delete_dict)
 
 def search(request):
-    infodata = SearchModelForm.objects.all()
+    infodata = InfoModelForm.objects.all()
     if not request.POST.get('a') :
       pass
     else :
@@ -83,7 +83,8 @@ def search(request):
     if not request.POST.get('b') :
       pass
     else :
-      infodata = infodata.filter(name__contains=request.POST.get('b'))
+      searchb = str(name__contains=request.POST.get('b'))
+      infodata = infodata.filter(searchb)
     if not request.POST.get('c') :
       pass
     else :
